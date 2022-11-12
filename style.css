@@ -1,0 +1,427 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;1,700&family=Montserrat+Subrayada:wght@400;700&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+/* 
+
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Montserrat Subrayada', sans-serif;
+font-family: 'Poppins', sans-serif; 
+font-family: 'Cinzel', serif;
+
+*/
+
+* 
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --blackColor:rgb(18,19,20);
+    --bluePurpColor:rgb(38,37,79);
+    --grayColor:rgb(183,187,192);
+    --lightGrayColor:rgb(245,247,250);
+    --blueColor:rgb(0,67,156);
+
+}
+
+/* fixed styels */
+
+.commonPadding 
+{
+    padding: 0 3.5rem;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+i 
+{
+    cursor: pointer;
+}
+li 
+{
+    text-decoration: none;
+    list-style:none;
+}
+button 
+{
+    border: none;
+    background-color: var(--blueColor);
+    padding: .85rem 1.35rem;
+    color: white;
+    border-radius: .5rem;
+}
+button:hover
+{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/* font sizes */
+.bigHeading 
+{
+    font-size: 2.5rem;
+    font-family: 'Cinzel', serif;
+}
+.normalHeading 
+{
+    font-size: 1.85rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.smallHeading 
+{
+    font-size: .85rem;
+    font-weight: bold;
+    
+}
+.normalPara 
+{
+    font-size: 1.35rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.smallPara 
+{
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+/* navbar */
+
+nav 
+{
+    background-color: rgb(39,69,152);
+    padding: .5rem 1.58rem;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+nav img 
+{
+    width: 130px;
+    clip-path: circle(30.0% at 50% 51%);
+}
+
+.navLinks ul
+{
+    display: flex;
+}
+
+.navLinks li
+{
+    padding: .85rem;
+    color: white;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+.signInBox
+{
+    margin-left: auto;
+    margin-right: .5rem;
+}
+.signInBox a
+{
+    padding: .85rem 1rem;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+.signInBox i 
+{
+    font-size: 1.25rem;
+    color: white;
+}
+
+
+/* Hero Banner Section */
+
+.HeroBannerSection
+{
+    height: 90vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.628), rgba(0, 0, 0, 0.011)) ,url("https://images.alphacoders.com/117/thumb-1920-1173124.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    color: rgb(255, 255, 255);
+}
+.bannerContent
+{
+    width: 50%;
+    margin: 5rem;
+}
+.bannerContent .normalPara
+{
+    margin: .85rem 0;
+}
+
+/* banner Boxes */
+.HeroBannerViewBoxes
+{
+    display: flex;
+    margin: 3rem 0;
+    justify-content: space-around;
+    align-items: center;
+}
+.HeroBannerViewBoxes .viewBox img
+{
+    width: 200px;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+
+}
+
+.HeroBannerViewBoxes .viewBox:hover img 
+{
+    transform: scale(1.05);
+    box-shadow: 5px 10px 10px 0 rgb(46, 46, 46);
+}
+
+/* Main content  */
+
+main 
+{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.mainContent h1 
+{
+    opacity: .88;
+}
+.mainContent p
+{
+    margin: 1.85rem 0;
+    opacity: .85;
+}
+main img 
+{
+    width: 50%;
+}
+/* main content View boxes */
+
+.mainBannerViewBoxes
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+.mainBannerViewBoxes .viewBox
+{
+    width: 200px;
+    height: 200px;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: .5rem;
+    transition:all .25s ease;
+}
+.mainBannerViewBoxes .viewBox p
+{
+    opacity: .85;
+}
+.mainBannerViewBoxes .viewBox img 
+{
+    width: 150px;
+    opacity: .85;
+    transition: all .25s ease;
+    filter: grayscale(1);
+    margin-bottom: 1.25rem;
+}
+.mainBannerViewBoxes .viewBox:hover img 
+{
+    opacity: 1;
+    filter: grayscale(0);
+}
+.mainBannerViewBoxes .viewBox:hover 
+{
+    border: 3px solid var(--blueColor);
+}
+
+
+/* play station banner */
+
+.playStationBanner
+{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grayColor);
+}
+.playStationBannerContent 
+{
+    width: 50%;
+}
+.playStationBannerContent p
+{
+    margin: 1.895rem 0;
+    opacity: .85;
+}
+.playStationBannerContent img 
+{
+    width: 300px;
+}
+.playStationImage
+{
+    width: 35%;
+    margin-left: 3.5rem;
+}
+
+/* Month playstation banner */
+
+.monthPlayStationBanner
+{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 65vh;
+    background: linear-gradient(to top, rgb(74, 49, 116), rgba(74, 49, 116, 0)), url("https://images6.alphacoders.com/120/1209131.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+.monthPScontent p 
+{
+    margin: 1.5rem 0;
+    line-height: 1.25;
+}
+.monthPScontent button 
+{
+    background-color: white;
+    color: black;
+}
+
+/* monthPSViewBoxes */
+
+.monthPSViewBoxes
+{
+    height: 60vh;
+    background-color: rgb(74, 49, 116);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.monthPSViewBoxes .viewBox img 
+{
+    width: 80%;
+    border-radius: 1.25rem;
+    box-shadow: 3px 3px 10px 0 black;
+    transition: all .25s ease-in-out;
+
+}
+.monthPSViewBoxes .viewBox
+{
+    padding:0 .85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.viewBoxContent
+{
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 2rem 0;
+    opacity: .60;
+}
+.monthPSViewBoxes .viewBox img:hover 
+{
+    transform: scale(1.03);
+}
+
+/* the last of us banner */
+
+.lastOfUsBanner
+{
+    height: 80vh;
+    background:linear-gradient(to right, rgba(0, 0, 0, 0.753), rgba(0, 0, 0, 0)), url("https://s3.us-east-1.amazonaws.com/nd.images/uploads/d20220518_TLOUX_SocialAssets_T1X_-Annouce_16x9.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    color: white;
+
+}
+
+.lastOfUsContent
+{
+    margin: 3.5rem 0;
+}
+.lastOfUsContent p 
+{
+    margin: 1.28rem 0;
+    opacity: .75;
+    line-height: 1.35;
+}
+
+.lastOfUsContent button 
+{
+    background-color: white;
+    color: black;
+}
+
+/* all games section  */
+
+.allGamesViewBoxes
+{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(26,21,16);
+   color: white;
+}
+.allGamesViewBoxes > div p
+{
+    margin: .85rem 0;
+}
+.gamesViewBoxes 
+{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 30px;
+    margin-top: 2rem;
+}
+.gameBox 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.gameBox img 
+{
+    height:200px;
+    width: 200px;
+    border-radius: .85rem;
+    margin: .85rem 0;
+}
+.gameBox h1 
+{
+    font-weight: normal;
+    text-transform: capitalize;
+    opacity: .75;
+}
