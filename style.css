@@ -17,6 +17,10 @@ font-family: 'Cinzel', serif;
     box-sizing: border-box;
 }
 
+html 
+{
+    scroll-behavior: smooth;
+}
 :root
 {
     --blackColor:rgb(18,19,20);
@@ -55,11 +59,13 @@ button
     padding: .85rem 1.35rem;
     color: white;
     border-radius: .5rem;
+    transition: all .25s ease-in-out;
 }
 button:hover
 {
     transform: scale(1.02);
     cursor: pointer;
+    box-shadow: 3px 3px .8rem 0px rgb(60, 60, 60);
 }
 
 /* font sizes */
@@ -94,19 +100,20 @@ button:hover
 
 nav 
 {
-    background-color: rgb(39,69,152);
+    background-color: rgba(248, 248, 248, 0.304);
     padding: .5rem 1.58rem;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     position: fixed;
     width: 100%;
     z-index: 5;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(5px);
 }
 nav img 
 {
-    width: 130px;
-    clip-path: circle(30.0% at 50% 51%);
+    width: 50px;
+    filter: invert();
 }
 
 .navLinks ul
@@ -178,14 +185,17 @@ nav img
     width: 200px;
     border-radius: .5rem;
     cursor: pointer;
-    transition: all .25s ease-in-out;
-
+    transition: all .5s ease-in-out;
+    border: 3px solid white;
+    outline: 3px solid white;
 }
 
 .HeroBannerViewBoxes .viewBox:hover img 
 {
     transform: scale(1.05);
     box-shadow: 5px 10px 10px 0 rgb(46, 46, 46);
+    outline: 3px solid var(--blueColor) ;
+    border: 3px solid white;
 }
 
 /* Main content  */
@@ -424,4 +434,242 @@ main img
     font-weight: normal;
     text-transform: capitalize;
     opacity: .75;
+}
+
+.explorePS
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.explorePS p 
+{
+    margin: .85rem 0;
+    opacity: .85;
+}
+.exploreViewBoxes
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 2rem 0;
+}
+
+.exploreBoxe
+{
+    text-align: center;
+    padding: .85rem 1rem;
+}
+.exploreBoxe img 
+{
+    width: 300px;
+    margin: .85rem 0;
+    transition: all .5s ease-in-out;
+}
+.exploreBoxe img:hover 
+{
+    transform: scale(1.15);
+}
+.exploreBoxContent p
+{
+   margin: 1rem;
+}
+.exploreBoxe:nth-child(2) img
+{
+    
+    width: 250px;
+}
+
+/* sales banner */
+
+.saleBanner 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    background: linear-gradient( rgba(255, 255, 255, 0.454),rgba(234, 11, 234, 0.52));
+    padding: 5rem 0;
+}
+.saleBannerContent
+{
+    margin: 0 3rem 0 0 ;
+} 
+.saleBannerContent .bigHeading 
+{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    color: rgb(228, 59, 247);
+    
+    margin-bottom: .85rem;
+}
+.saleBannerContent p 
+{
+    opacity: .85;
+    margin: .85rem 0;
+}
+.saleBanner img 
+{
+    width: 60%;
+    border-radius: .85rem;
+}
+
+.saleBannerContent button 
+{
+    background-color: rgb(154, 0, 156);
+    color: white;
+    text-transform: uppercase;
+}
+
+/* latest from play station */
+
+.latestNewsSection 
+{
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.latestNewsSection .bigHeading
+{
+    opacity: .85;
+}
+.latestNewsBoxes
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+.latestNewsViewBox
+{
+    /* border: 2px solid red; */
+    padding: .85rem 1.12rem;
+    margin: .85rem 1rem ;
+    background-color: rgba(233, 233, 233, 0.47);
+    border-radius: 1rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.latestNewsViewBox>img 
+{
+    width: 100%;
+    margin: .85rem 0;
+    border-radius: .25rem;
+}
+.latestNewsViewBox:hover 
+{
+    box-shadow: 3px 3px 12px 0 rgb(118, 118, 118);
+}
+.latesNewsContent >p 
+{
+    margin: 1.25rem 0;
+    opacity: .65;
+}
+.newCreatorBox
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.newCreatorBox img 
+{
+    margin-right: 2rem;
+}
+.newCreatorBox p 
+{
+    opacity: .85;
+}
+
+
+/* social media */
+
+.followUsSection
+{
+    padding: 4.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--lightGrayColor);
+    background:linear-gradient(to top, rgb(0,67,156), rgba(255, 255, 255, 0.516)), url("https://images.unsplash.com/photo-1501791187590-9ef2612ba1eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.socialIcons
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem 0;
+}
+.socialIcons a 
+{
+    width: 80px;
+    height: 80px;
+    margin: 0 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    border-radius: 50%;
+}
+.socialIcons svg 
+{
+    width: 50px;
+    color: rgb(255, 250, 250);
+    transition: all .25s ease;
+    cursor: pointer;
+    z-index: -5;
+
+}
+.socialIcons svg:hover 
+{
+    transform: translateY(-10px);
+    z-index: 5;
+}
+
+/* footer */
+.footerSection
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--blueColor);
+    padding: 3rem 0 7rem;
+    position: relative;
+    color: white;
+}
+footer div 
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+footer div ul li 
+{
+    line-height: 2;
+    text-transform: capitalize;
+   
+}
+footer li a 
+{
+    color: white;
+}
+footer li a:hover 
+{
+    text-decoration: underline;
+}
+
+
+.copyRightSection 
+{
+    position: absolute;
+    bottom: 2px;
+    left: 48%;
 }
